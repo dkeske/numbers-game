@@ -11,6 +11,10 @@ Numbers Game
     number.
 </p>
 
+{% if group_policy %}
+<p>The current group policy is <strong>{{group_policy}}</strong>.</p>
+{% endif %}
+
 {% formfield player.chosen_number label="Choose a number" %}
 
 {% next_button %}

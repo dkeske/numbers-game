@@ -10,6 +10,15 @@ class WelcomePage(Page):
     form_fields = ['chosen_number']
 
     # DecisionFormSet = modelformset_factory(Decision, fields=('chosen_number', 'round_number'), extra=0)
+    def vars_for_template(self):
+        if self.round_number > 1:
+            return {
+                'round_number': self.round_number,
+                'group_policy': self.group.group_policy
+            }
+        return {
+            'group_policy': "Pera"
+        }
 
 
 class ResultsWaitPage(WaitPage):
@@ -18,6 +27,8 @@ class ResultsWaitPage(WaitPage):
         group_players = self.group.get_players()
         group_numbers = [p.chosen_number for p in group_players]
         self.group.group_policy = mean(group_numbers)
+        if self.round_number < Constants.num_rounds:
+            self.group.in_round(self.round_number + 1).group_policy = self.group.group_policy
         if self.group.round_number == Constants.num_rounds:
             self.group.set_payoffs()
 
