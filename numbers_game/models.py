@@ -17,7 +17,7 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'numbers_game'
     players_per_group = None
-    num_rounds = 3
+    num_rounds = 1
     endowment = c(10)
     min_number = c(0)
     max_number = c(20)
@@ -28,17 +28,20 @@ class Subsession(BaseSubsession):
         """For each player, create a fixed number of "decision stubs" with random values to be decided upon later."""
         for p in self.get_players():
             # p.generate_decision_stubs()
-            p.assigned_number = 5
+            p.assigned_number = uniform(Constants.min_number, Constants.max_number)
 
 
 class Group(BaseGroup):
-    pass
+    group_policy = models.FloatField()
+
+    def set_payoffs(self):
+        for p in self.get_players():
+            p.payoff = abs(p.chosen_number - self.group_policy)
 
 
 class Player(BasePlayer):
     assigned_number = models.IntegerField()
     chosen_number = models.IntegerField()
-    # uniform(Constants.min_number, Constants.max_number)
 
     # def generate_decision_stubs(self):
     #     """
