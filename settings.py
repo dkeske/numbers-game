@@ -19,52 +19,56 @@ SESSION_CONFIGS = [
         'name': 'my_matching_pennies',
         'display_name': "My Matching Pennies (tutorial version)",
         'num_demo_participants': 2,
-        'app_sequence': [
-            'my_matching_pennies',
-        ],
+        'app_sequence': ['my_matching_pennies'],
     },
     {
-        'name': 'trust',
-        'display_name': "Trust Game",
-        'num_demo_participants': 2,
-        'app_sequence': ['trust', 'payment_info'],
-    },
-    {
-        'name': 'my_public_goods',
-        'display_name': "My Public Goods (Simple Version)",
+        'name': 'numbers_game',
+        'display_name': "Numbers Game",
         'num_demo_participants': 3,
-        'app_sequence': ['my_public_goods'],
+        'app_sequence': ['numbers_game'],
     },
-    {
-        'name': 'my_simple_survey',
-        'display_name': "My Simple Survey",
-        'num_demo_participants': 3,
-        'app_sequence': ['my_simple_survey'],
-    },
-    {
-        'name': 'public_goods',
-        'display_name': "Public Goods",
-        'num_demo_participants': 3,
-        'app_sequence': ['public_goods', 'payment_info'],
-    },
-    {
-        'name': 'guess_two_thirds',
-        'display_name': "Guess 2/3 of the Average",
-        'num_demo_participants': 3,
-        'app_sequence': ['guess_two_thirds', 'payment_info'],
-    },
-    {
-        'name': 'survey',
-        'display_name': "Survey",
-        'num_demo_participants': 1,
-        'app_sequence': ['survey', 'payment_info'],
-    },
-    {
-        'name': 'quiz',
-        'display_name': "Quiz",
-        'num_demo_participants': 1,
-        'app_sequence': ['quiz'],
-    },
+    # {
+    #     'name': 'trust',
+    #     'display_name': "Trust Game",
+    #     'num_demo_participants': 2,
+    #     'app_sequence': ['trust', 'payment_info'],
+    # },
+    # {
+    #     'name': 'my_public_goods',
+    #     'display_name': "My Public Goods (Simple Version)",
+    #     'num_demo_participants': 3,
+    #     'app_sequence': ['my_public_goods'],
+    # },
+    # {
+    #     'name': 'my_simple_survey',
+    #     'display_name': "My Simple Survey",
+    #     'num_demo_participants': 3,
+    #     'app_sequence': ['my_simple_survey'],
+    # },
+    # {
+    #     'name': 'public_goods',
+    #     'display_name': "Public Goods",
+    #     'num_demo_participants': 3,
+    #     'app_sequence': ['public_goods', 'payment_info'],
+    # },
+    # {
+    #     'name': 'guess_two_thirds',
+    #     'display_name': "Guess 2/3 of the Average",
+    #     'num_demo_participants': 3,
+    #     'app_sequence': ['guess_two_thirds', 'payment_info'],
+    # },
+    # {
+    #     'name': 'survey',
+    #     'display_name': "Survey",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['survey', 'payment_info'],
+    # },
+    # {
+    #     'name': 'quiz',
+    #     'display_name': "Quiz",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['quiz'],
+    # },
 ]
 # see the end of this file for the inactive session configs
 

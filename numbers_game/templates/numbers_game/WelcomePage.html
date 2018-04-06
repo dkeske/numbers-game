@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+Numbers Game
+{% endblock %}
+
+{% block content %}
+
+<p>The number you have been assigned is {{Player.assigned_number}}. You want the end policy to be close to this
+    number.
+</p>
+
+{% formfield player.chosen_number label="Choose a number" %}
+
+{% next_button %}
+
+{% endblock %}
