@@ -12,13 +12,16 @@ class WelcomePage(Page):
     # DecisionFormSet = modelformset_factory(Decision, fields=('chosen_number', 'round_number'), extra=0)
     def vars_for_template(self):
         if self.round_number > 1:
+            groups_per_round = self.group.in_previous_rounds()
+            # group_players = [g.get_players() for g in groups_per_round]
+            player_ids = [p.id_in_group for p in self.group.get_players()]
             return {
                 'round_number': self.round_number,
-                'group_policy': self.group.group_policy
+                'group_policy': self.group.group_policy,
+                'groups_per_round': groups_per_round,
+                'players_per_group': Constants.players_per_group,
+                'player_ids': player_ids
             }
-        return {
-            'group_policy': "Pera"
-        }
 
 
 class ResultsWaitPage(WaitPage):

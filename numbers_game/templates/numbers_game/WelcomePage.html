@@ -15,6 +15,25 @@ Numbers Game
 <p>The current group policy is <strong>{{group_policy}}</strong>.</p>
 {% endif %}
 
+{% if groups_per_round %}
+<table>
+    <tr>
+        <th>Round number</th>
+        {% for player_id in player_ids %}
+        <th>Player {{player_id}}</th>
+        {% endfor %}
+    </tr>
+    {% for group_in_round in groups_per_round %}
+    <tr>
+        <td>{{group_in_round.round_number}}</td>
+        {% for player in group_in_round.get_players %}
+        <td>{{player.chosen_number}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
 {% formfield player.chosen_number label="Choose a number" %}
 
 {% next_button %}

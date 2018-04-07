@@ -16,7 +16,7 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'numbers_game'
-    players_per_group = None
+    players_per_group = 3
     num_rounds = 3
     endowment = c(10)
     min_number = c(0)
@@ -56,10 +56,8 @@ class Player(BasePlayer):
     #     decision.value = random.randint(1, 10)  # don't forget to "import random" before!
     #     decision.save()  # important: save to DB!
 
-
 # class Decision(Model):  # our custom model inherits from Django's base class "Model"
 #     chosen_number = models.IntegerField()
 #     player_decided = models.BooleanField()
 #     round_id = models.IntegerField()
 #     player = ForeignKey(Player, on_delete=CASCADE)  # creates 1:m relation -> this decision was made by a certain player
-
