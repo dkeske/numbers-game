@@ -14,4 +14,6 @@ class PlayerBot(Bot):
         else:
             yield (pages.WelcomePage, {'chosen_number': 10})
         if self.round_number == Constants.num_rounds:
+            assert (self.player.payoff == abs(self.player.assigned_number - self.player.payoff),
+                    "Payoff calculation is wrong")
             yield (pages.Results)

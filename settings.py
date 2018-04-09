@@ -8,6 +8,8 @@ import otree.settings
 # the session config can be accessed from methods in your apps as self.session.config,
 # e.g. self.session.config['participation_fee']
 
+CHANNEL_ROUTING = 'routing.channel_routing'
+
 SESSION_CONFIG_DEFAULTS = {
     'real_world_currency_per_point': 1.00,
     'participation_fee': 0.00,
