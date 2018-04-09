@@ -21,6 +21,8 @@ class Constants(BaseConstants):
     endowment = c(10)
     min_number = c(0)
     max_number = c(20)
+    min_chosen_num = c(0)
+    max_chosen_num = c(20)
 
 
 class Subsession(BaseSubsession):
@@ -45,7 +47,7 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     assigned_number = models.IntegerField()
-    chosen_number = models.IntegerField()
+    chosen_number = models.IntegerField(min=Constants.min_chosen_num, max=Constants.max_chosen_num)
 
     # def generate_decision_stubs(self):
     #     """
