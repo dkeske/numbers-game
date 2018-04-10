@@ -24,6 +24,13 @@ SESSION_CONFIGS = [
     {
         'name': 'numbers_game',
         'display_name': "Numbers Game",
+        'num_demo_participants': 2,
+        'app_sequence': ['numbers_game'],
+        'use_browser_bots': False,
+    },
+    {
+        'name': 'numbers_game_bots',
+        'display_name': "Numbers Game (bots)",
         'num_demo_participants': 3,
         'app_sequence': ['numbers_game'],
         'use_browser_bots': True,
