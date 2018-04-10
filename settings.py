@@ -24,7 +24,7 @@ SESSION_CONFIGS = [
     {
         'name': 'numbers_game',
         'display_name': "Numbers Game",
-        'num_demo_participants': 2,
+        'num_demo_participants': 3,
         'app_sequence': ['numbers_game'],
         'use_browser_bots': False,
     },
