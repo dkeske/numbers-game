@@ -12,7 +12,4 @@ if [ ! -f "/opt/init/.done" ]; then
 fi
 
 export PYTHONUNBUFFERED=1
-#cd /opt/otree && otree devserver 0.0.0.0:80
 cd /opt/otree && otree runprodserver --port=80
-#cd /opt/otree
-#read
